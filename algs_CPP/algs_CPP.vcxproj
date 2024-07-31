@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="containers\m_vector.hpp" />
     <ClInclude Include="core\Timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="containers\vector_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
