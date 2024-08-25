@@ -93,7 +93,7 @@ public:
             m_data     = (T*)::operator new(sizeof(T) * m_capacity);
             for (size_t i = 0; i < m_size; i++)
             {
-                new (m_data + i) T(other.m_data[i]); // construct
+                ::new (m_data + i) T(other.m_data[i]); // construct
             }
         }
 
@@ -156,7 +156,7 @@ private:
 
         for (size_t i = 0; i < m_size; i++)
         {
-            new (new_data + i) T(std::move(m_data[i])); // move construct
+            ::new (new_data + i) T(std::move(m_data[i])); // move construct
             m_data[i].~T();
         }
 
@@ -185,7 +185,7 @@ public:
         {
             resize(m_capacity * 2);
         }
-        new (m_data + m_size) T(value); // dont use assignment for unconstruted memory
+        ::new (m_data + m_size) T(value); // dont use assignment for unconstruted memory
         m_size++;
     }
 
@@ -195,7 +195,7 @@ public:
         {
             resize(m_capacity * 2);
         }
-        new (m_data + m_size) T(std::move(value)); // move construct
+        ::new (m_data + m_size) T(std::move(value)); // move construct
         m_size++;
     }
 
@@ -205,7 +205,7 @@ public:
         {
             resize(m_capacity * 2);
         }
-        new (m_data + m_size) T(std::move(value)); // move construct
+        ::new (m_data + m_size) T(std::move(value)); // move construct
         m_size++;
     }
 

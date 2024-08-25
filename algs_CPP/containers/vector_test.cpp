@@ -28,5 +28,7 @@ int main()
     v_str2 = v_str3;
     v_str2 = std::move(v_str3);
 
+    // std::cin.get();
+
     return 0;
 }

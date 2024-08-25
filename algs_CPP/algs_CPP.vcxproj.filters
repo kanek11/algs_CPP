@@ -21,10 +21,22 @@
     <ClInclude Include="containers\m_vector.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="containers\m_AVLTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="containers\m_pair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="containers\m_map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="containers\vector_test.cpp">
+    <ClCompile Include="containers\map_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMakeLists.txt" />
   </ItemGroup>
 </Project>
